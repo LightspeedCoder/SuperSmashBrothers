@@ -21,7 +21,7 @@ var game = new Phaser.Game(config)
 function preload() {
   this.load.image('dvdtileone','dvdsetone.png')
   this.load.tilemapTiledJSON('dvdmapone','dvdmapone.json')
-  this.load.image('fireDragon','firedragon.png')
+  this.load.image('fireDragonLeft','firedragonleft.png')
 }
 function create() {
   var map = this.add.tilemap('dvdmapone')
@@ -31,7 +31,7 @@ function create() {
     real.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
     real.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
     real.keyW = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
-    real.hero = this.physics.add.sprite(50,50,'fireDragon')
+    real.hero = this.physics.add.sprite(50,50,'fireDragonLeft')
 this.physics.add.collider(real.hero, GroundBlackOne)
 this.physics.add.collider(real.hero, SkyOne)
   GroundBlackOne.setCollisionByProperty({collides:true}) 
