@@ -22,6 +22,7 @@ function preload() {
   this.load.image('dvdtileone','dvdsetone.png')
   this.load.tilemapTiledJSON('dvdmapone','dvdmapone.json')
   this.load.image('fireDragonLeft','firedragonleft.png')
+  this.load.image('fireDragonRight','firedragonright.png')
 }
 function create() {
   var map = this.add.tilemap('dvdmapone')
@@ -44,10 +45,13 @@ function update() {
   if(real.keyD.isDown) 
   {
     real.hero.x += 5
+    fireDragonLeft.Destroy()
+    this.add.sprite('fireDragonRight',10,30)
   }
   if(real.keyA.isDown) 
   {
     real.hero.x -= 5
+    
   }
   if(real.keyW.isDown) 
   {
