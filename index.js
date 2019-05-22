@@ -61,6 +61,6 @@ function update() {
   if(real.keyW.isDown && real.keyD.isDown) 
   {
     real.hero.y -= 4
-    real.hero.x -= 5
+    real.hero.x += 5
   }
 }
