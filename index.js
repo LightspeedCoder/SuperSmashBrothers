@@ -45,8 +45,6 @@ function update() {
   if(real.keyD.isDown) 
   {
     real.hero.x += 5
-    fireDragonLeft.Destroy()
-    this.add.sprite('fireDragonRight',10,30)
   }
   if(real.keyA.isDown) 
   {
